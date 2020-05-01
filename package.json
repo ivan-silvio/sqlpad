@@ -35,7 +35,9 @@
     "start-server-dev": "node-dev server/server.js --dir ./db --port 3010 --debug --base-url '/sqlpad'",
     "start": "concurrently \"npm run start-server-dev\" \"npm run start-client-dev\"",
     "test-client": "react-scripts test --env=jsdom",
-    "test": "rimraf dbtest && npm run lint && SQLPAD_DB_PATH='./dbtest' mocha server/test --timeout 10000 --recursive --exit"
+    "test": "rimraf dbtest && npm run lint && SQLPAD_DB_PATH='./dbtest' mocha server/test --timeout 10000 --recursive --exit",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "prettier": {
     "semi": false,
@@ -87,7 +89,8 @@
     "serve-favicon": "^2.5.0",
     "socksjs": "^0.5.0",
     "uuid": "^3.2.1",
-    "vertica": "^0.5.5"
+    "vertica": "^0.5.5",
+    "snyk": "^1.316.1"
   },
   "main": "./server/app.js",
   "bin": {
@@ -139,5 +142,6 @@
     "tachyons": "^4.9.1",
     "taucharts": "^1.2.1",
     "whatwg-fetch": "^2.0.4"
-  }
+  },
+  "snyk": true
 }
