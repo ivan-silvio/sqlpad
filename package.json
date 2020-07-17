@@ -80,7 +80,7 @@
     "passport-local": "^1.0.0",
     "pg": "^7.4.1",
     "pg-cursor": "^1.0.1",
-    "request": "^2.85.0",
+    "request": "^2.88.0",
     "rimraf": "^2.5.4",
     "sanitize-filename": "^1.6.1",
     "semver-diff": "^2.1.0",
